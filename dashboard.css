@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white; /* Specify icon color */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-name {
+    margin-left: 10px;
+    color: white; /* Specify user name color */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 50px;
+    transition: 0.5s;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url('/images/BG.PNG');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.check-model-btn {
+    background-color: #3c00a0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.check-model-btn:hover {
+    background-color: #2a0070;
+}
+
+/* ... (previous CSS code) ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Limit the maximum width of the modal content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+
+#resultSection {
+    display: none;
+}
+
+
+.result-card {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.result-card.green {
+    background-color: #8eff8e; /* Light green for positive result */
+    color: #006400; /* Dark green text for positive result */
+}
+
+.result-card.red {
+    background-color: #ff8e8e; /* Light red for negative result */
+    color: #8b0000; /* Dark red text for negative result */
+}
+
+
+
+#parametersForm {
+    margin-top: 20px;
+}
+
+#parametersForm h5 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#parametersForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#parametersForm button {
+    background-color: #3c00a0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#parametersForm button:hover {
+    background-color: #2a0070;
+}
+
+
+#previousAttacksContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Loading state styles */
+#previousAttacksContainer p.loading {
+    color: #3c00a0;
+    font-weight: bold;
+}
+
+/* Error state styles */
+#previousAttacksContainer p.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* ///////// */
+
+/* Add your existing styles here */
+
+.blog-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.blog-card {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.blog-card img,
+iframe {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h2,
+.blog-card p {
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.learn-more-btn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #3c00a0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #2a0070;
+}
+
+
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    .blog-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.blog-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.blog-card {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h2,
+.blog-card p {
+    padding: 5px;
+}
+
+.learn-more-btn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #3c00a0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #2a0070;
+}
+

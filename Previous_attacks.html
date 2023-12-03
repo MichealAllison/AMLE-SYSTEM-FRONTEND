@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Previous Attacks</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="ATTACKS.png" alt="Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        <div class="user-info">
+            <div class="profile">
+                <img src="img.jpg" alt="User Profile">
+            </div>
+            <div class="user-name">John Doe</div>
+        </div>
+    </header>
+
+    <section class="sidebar" id="sidebar">
+        <span class="close-icon" onclick="toggleSidebar()">&times;</span>
+        <a href="Dashboard.html">Home</a>
+        <a href="Previous_attacks.html">Recent</a>
+        <a href="Learmore.html">Learn more</a>
+    </section>
+
+    <section class="hero-section">
+        <h1>Previous Attack</h1>
+    </section>
+
+    <section id="previousAttacksContainer">
+        <!-- Previous attacks will be displayed here -->
+    </section>
+
+    <script src="previous_attack.js"></script>
+</body>
+
+</html>

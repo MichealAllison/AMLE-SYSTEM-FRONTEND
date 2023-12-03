@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="ATTACKS.png" alt="Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+        <div class="user-info">
+            <div class="profile">
+                <img src="img.jpg" alt="User Profile">
+            </div>
+            <div class="user-name">John Doe</div>
+        </div>
+    </header>
+
+    <section class="sidebar" id="sidebar">
+        <span class="close-icon" onclick="toggleSidebar()">&times;</span>
+        <a href="Dashboard.html">Home</a>
+        <a href="Previous_attacks.html">Recent</a>
+        <a href="Learmore.html">Learn more</a>
+    </section>
+
+    <section class="hero-section">
+        <h1>Welcome to Adversarral ML Evaluation System</h1>
+        <button class="check-model-btn" onclick="openModal('myModal')">Check My Model</button>
+    </section>
+
+    <!-- Modal for Attack Selection -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('myModal')">&times;</span>
+            <h2>Choose the Type of Attack</h2>
+            <button onclick="openParametersForm('FGSM')" class="check-model-btn">FGSM</button>
+            <button onclick="openParametersForm('Backdoor')" class="check-model-btn">Backdoor</button>
+            <button onclick="openParametersForm('Copycat CNN')" class="check-model-btn">Copycat CNN</button>
+        </div>
+    </div>
+    
+
+    <!-- Modal for Attack Parameters -->
+    <div id="parametersModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('parametersModal')">&times;</span>
+            <h2 id="attackTypeHeader">Choose the Type of Attack</h2>
+
+            <div id="parametersForm" style="display: none;">
+                <h5>Robust Model in h5:</h5>
+                <input type="text" id="robustModelInput">
+
+                <h5>Vulnerable Model in h5:</h5>
+                <input type="text" id="vulnerableModelInput">
+
+                <h5>Epsilon (High and Low):</h5>
+                <input type="text" id="epsilonHighInput" placeholder="High Epsilon">
+                <input type="text" id="epsilonLowInput" placeholder="Low Epsilon">
+
+                <h5>Epsilon Stop:</h5>
+                <input type="text" id="epsilonStopInput">
+
+                <h5>Batch Size:</h5>
+                <input type="text" id="batchSizeInput">
+
+                <button onclick="runAttack()">Run Attack</button>
+            </div>
+
+            <div id="resultSection" style="display: none;">
+                <div id="resultCard" class="result-card"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
